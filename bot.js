@@ -10,7 +10,6 @@ const client = new Client({
 const config = require("./config");
 
 client.commands = new Collection();
-client.AutoComplete = new Collection();
 client.Button = new Collection();
 client.ContextMenu = new Collection();
 client.ModalSubmit = new Collection();
