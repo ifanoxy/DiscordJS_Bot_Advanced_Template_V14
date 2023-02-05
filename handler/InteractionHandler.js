@@ -8,14 +8,14 @@ function loadInteraction(client) {
     let contextMenusArray = [];
     let developerArray = [];
 
-    const commandsFolders = fs.readdirSync("./commandes");
+    const commandsFolders = fs.readdirSync("./commands");
     for (const folder of commandsFolders) {
         const commandFiles = fs
         .readdirSync(`./commandes/${folder}`)
         .filter((file) => file.endsWith(".js"));
 
         for (const file of commandFiles) {
-            const commandFile = require(`../commandes/${folder}/${file}`);
+            const commandFile = require(`../commands/${folder}/${file}`);
 
             client.commands.set(commandFile.data.name, commandFile);
 
