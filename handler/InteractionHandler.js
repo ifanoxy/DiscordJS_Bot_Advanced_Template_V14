@@ -11,7 +11,7 @@ function loadInteraction(client) {
     const commandsFolders = fs.readdirSync("./commands");
     for (const folder of commandsFolders) {
         const commandFiles = fs
-        .readdirSync(`./commandes/${folder}`)
+        .readdirSync(`./commands/${folder}`)
         .filter((file) => file.endsWith(".js"));
 
         for (const file of commandFiles) {
